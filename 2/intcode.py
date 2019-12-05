@@ -31,6 +31,6 @@ class Intcode:
             elif self.current == 99:
                 return self.program[0]
 
-    def reset(self, pc=0, program=None):
+    def reset(self, program, pc=0):
         self.pc = pc
         self.program = copy.deepcopy(program)
