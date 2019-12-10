@@ -80,8 +80,7 @@ class Intcode:
                 data = yield
                 self.read(data)
             elif opcode == 4:
-                self.write()
-                yield
+                yield self.write()
             elif opcode == 5:
                 self.jit()
             elif opcode == 6:
