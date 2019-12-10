@@ -1,5 +1,5 @@
-from intcode import Intcode
 from io import StringIO
+from intcode import Intcode
 
 with open('input.txt') as program:
     codes = [int(code) for code in program.read().strip().split(',')]
