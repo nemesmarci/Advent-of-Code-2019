@@ -111,7 +111,10 @@ class Intcode:
                 break
 
     def reset(self, program, pc=0):
-        self.program = copy.deepcopy(program)
+        self.program = defaultdict(int)
+        for i, p in enumerate(program):
+            self.program[i] = p
         self.pc = pc
-        self.a, self.b, self.c = 0
+        self.a, self.b, self.c = 0, 0, 0
         self.output = []
+
