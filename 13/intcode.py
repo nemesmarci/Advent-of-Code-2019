@@ -115,5 +115,5 @@ class Intcode:
             self.program[i] = p
         self.pc = pc
         self.a, self.b, self.c = 0, 0, 0
+        self.relative_base = 0
         self.output = []
-
